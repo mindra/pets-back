@@ -12,7 +12,7 @@ const cloudinaryClient = (cloudinary: any): CloudinaryClient => ({
             if (image) {
                 const uploadStream = cloudinary.uploader.upload_stream(
                     {
-                        transformation: { width: 1200, height: 675, crop: "fill" }
+                        transformation: { width: 1200, height: 675, crop: 'fill' }
                     },
                     (error: any, result: any) => {
                         if (error) {
