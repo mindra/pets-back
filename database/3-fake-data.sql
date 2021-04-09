@@ -7,6 +7,10 @@ INSERT INTO organization
 ('Javainis', 'Lietuva', 'Šveicarija', 'Ulrich Strasse 99', '+80871'),
 ('Pitoncas', 'Vokietija', 'Konstanca', 'Kalnų 38-5', '0044371');
 
+INSERT INTO organization_task
+(title, description, organization_id, is_done) VALUES
+('Veterinaras Murkei', 'Vieta: Kaunakiemio g. 15a', 1, DEFAULT);
+
 -- USER
 
 INSERT INTO app_user
@@ -59,6 +63,14 @@ INSERT INTO animal_microchip
 (5, '001010101', '4', '2020-09-01', '4', DEFAULT),
 (4, '29387', '5', '2020-04-14', '3', DEFAULT),
 (3, '2893402', '6', '2020-03-01', '4', DEFAULT);
+
+INSERT INTO animal_favorite 
+(user_id, animal_id) VALUES
+('dhjbwau74a6', 1),
+('aiubfaw4io09', 1),
+('aiubfaw4io09' ,4),
+('afhu9w4f78', 2),
+('278y2378ryb', 3);
 
 INSERT INTO animal_event_general
 (animal, type, expenses, date_time, comments) VALUES
@@ -118,16 +130,3 @@ INSERT INTO animal_event_given_away
 (1, 'Have to go abroad', 1, '2021-01-07'),
 (2, 'Išvyksta į užsienį', 2, '2021-01-01'),
 (3, 'Įsikėlė į butą, kuriame draudžia plaukuotus augintinius', 3, '2021-01-07');
-
--- ANIMAL FAVORITE
-INSERT INTO animal_favorite 
-(user_id, animal_id) VALUES
-('dhjbwau74a6', 1),
-('aiubfaw4io09', 1),
-('aiubfaw4io09' ,4),
-('afhu9w4f78', 2),
-('278y2378ryb', 3);
-
-INSERT INTO organization_task
-(title, description, organization_id, is_done) VALUES
-('Veterinaras Murkei', 'Vieta: Kaunakiemio g. 15a', 1, DEFAULT);
